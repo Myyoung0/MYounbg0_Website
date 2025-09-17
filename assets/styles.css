@@ -158,7 +158,8 @@ main { flex: 1 0 auto; }
 .loading-line.hide{ opacity: 0; }
 
 /* Cards */
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px; margin: 20px 0; }
+.card h2 { margin: 0 0 14px; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 18px 0; color: var(--muted); }
@@ -169,7 +170,7 @@ main { flex: 1 0 auto; }
 
 /* Details/summary */
 details { border: 1px solid var(--line); background: var(--card); border-radius: 10px; padding: 12px 14px; }
-details + details { margin-top: 10px; }
+details + details { margin-top: 12px; }
 summary { cursor: pointer; }
 summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
