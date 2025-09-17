@@ -9,7 +9,7 @@
 - `assets/theme.js`: 로컬 스토리지 기반 테마, 시스템 선호도 기본값, 토글 노출
 - `assets/anim.js`: IntersectionObserver 기반 진입 애니메이션(.reveal)
 - `assets/main.js`: 단축키, 부드러운 앵커 이동, ARIA 라이브 알림
-- `LICENSE`: MIT 라이선스
+- `assets/logo.jpg`: 파비콘/OG 이미지
 
 ### 로컬 실행
 브라우저로 `index.html`을 직접 열면 됩니다. 별도 빌드/서버 불필요.
@@ -37,8 +37,11 @@
 - 우선순위: `localStorage.theme` → 시스템 설정(`prefers-color-scheme`) → 기본(light)
 - 토글 시 `localStorage.theme`에 저장되고, 다음 방문 시 유지됩니다.
 
-### 라이선스
-MIT. 상세 내용은 `LICENSE` 파일을 참조하세요.
+### 모바일 탭 색상(theme-color)
+- `<meta name="theme-color">`가 라이트/다크 테마에 맞춰 동기화됩니다.
+- 초기 로드 및 토글 시 `assets/theme.js`에서 자동 업데이트됩니다.
 
-# MYounbg0_Website
-MYoung_Website Dev
+### 파비콘/미리보기 이미지
+- 파비콘: `assets/logo.jpg`를 `<link rel="icon" ...>`로 연결.
+- OG 이미지: 필요 시 `<meta property="og:image" content="./assets/logo.jpg">` 추가.
+
