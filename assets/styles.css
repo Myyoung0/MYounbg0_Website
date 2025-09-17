@@ -174,6 +174,21 @@ details + details { margin-top: 12px; }
 summary { cursor: pointer; }
 summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
+/* project disclosure */
+.project-section details, .cve-section details { position: relative; padding: 0; overflow: hidden; }
+.project-section summary, .cve-section summary { list-style: none; padding: 14px 16px; display: flex; align-items: center; gap: 10px; }
+.project-section summary::-webkit-details-marker, .cve-section summary::-webkit-details-marker { display: none; }
+.project-section summary::before, .cve-section summary::before { content: "▸"; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; color: var(--muted); transition: transform 180ms ease, color 180ms ease; }
+.project-section details[open] summary::before, .cve-section details[open] summary::before { transform: rotate(90deg); color: var(--fg); }
+.project-section details:hover, .cve-section details:hover { border-color: color-mix(in oklab, var(--accent) 40%, var(--line)); box-shadow: 0 10px 28px -18px color-mix(in oklab, var(--accent) 60%, transparent); }
+.project-section details > div, .cve-section details > div { padding: 0 16px 16px 38px; opacity: 0; transform: translateY(-4px); transition: opacity 200ms ease, transform 200ms ease; border-top: 1px dashed var(--line); }
+.project-section details[open] > div, .cve-section details[open] > div { opacity: 1; transform: translateY(0); }
+.project-section summary:hover, .cve-section summary:hover { background: color-mix(in oklab, var(--card) 80%, transparent); }
+.project-section summary:focus-visible, .cve-section summary:focus-visible { outline-offset: 2px; border-radius: 8px; }
+
+/* CVE note line break only */
+.cve-note { display: block; color: var(--muted); }
+
 /* Visually Hidden */
 .visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
 
